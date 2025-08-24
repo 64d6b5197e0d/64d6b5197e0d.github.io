@@ -1,1 +1,297 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukrainian Literature Bookclub</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .flyer {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 40px 40px 80px 40px;
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+
+               .title {
+                   font-family: 'Playfair Display', serif;
+                   font-size: 4em;
+                   font-weight: 700;
+                   letter-spacing: 3px;
+                   margin-bottom: 20px;
+               }
+
+               .subtitle {
+                   font-size: 2em;
+                   font-weight: 600;
+                   color: #ff4444;
+                   margin-bottom: 30px;
+                   letter-spacing: 2px;
+               }
+
+               .tagline {
+                   font-size: 1.5em;
+                   font-style: italic;
+                   opacity: 0.9;
+               }
+
+               .image-gallery {
+                   height: 180px;
+                   overflow: hidden;
+                   position: relative;
+                   background: #333;
+               }
+
+               .join-btn {
+                           background: #ff4444;
+                           color: white;
+                           border: none;
+                           padding: 15px 40px;
+                           font-size: 1.3em;
+                           font-weight: 600;
+                           text-transform: uppercase;
+                           letter-spacing: 1px;
+                           border-radius: 5px;
+                           cursor: pointer;
+                           transition: all 0.3s ease;
+                           box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+                           max-width: 420px;
+                           margin: auto;
+                       }
+
+                       .join-btn:hover {
+                           background: #e63939;
+                           transform: translateY(-2px);
+                           box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4);
+                       }
+
+               .image-scroll {
+                   display: flex;
+                   height: 100%;
+                   animation: infiniteScroll 30s linear infinite;
+               }
+
+               .gallery-image {
+                   flex-shrink: 0;
+                   width: calc(100vw / 6);
+                   height: 180px;
+                   background: #666;
+                   margin-right: 3px;
+                   background-size: cover;
+                   background-position: center;
+                   position: relative;
+               }
+
+               .gallery-image::before {
+                   content: attr(data-placeholder);
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%, -50%);
+                   color: #999;
+                   font-size: 12px;
+                   text-align: center;
+                   white-space: nowrap;
+               }
+
+               @keyframes infiniteScroll {
+                   0% {
+                       transform: translateX(0);
+                   }
+                   100% {
+                       transform: translateX(calc(-1 * (100vw / 6 + 3px) * 9));
+                   }
+               }
+
+               .content {
+                   padding: 40px;
+                   background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+               }
+
+               .section {
+                   margin-bottom: 30px;
+               }
+
+               .section h3 {
+                   font-family: 'Playfair Display', serif;
+                   font-size: 1.6em;
+                   font-weight: 700;
+                   margin-bottom: 12px;
+                   color: #333;
+                   text-transform: uppercase;
+                   letter-spacing: 1px;
+               }
+
+               .section p {
+                   line-height: 1.7;
+                   color: #555;
+                   font-size: 1.1em;
+               }
+
+               .cta {
+                   background: #cc3333;
+                   color: white;
+                   text-align: center;
+                   padding: 40px;
+               }
+
+               .cta h2 {
+                   font-family: 'Playfair Display', serif;
+                   font-size: 2em;
+                   font-weight: 700;
+                   margin-bottom: 10px;
+                   text-transform: uppercase;
+                   letter-spacing: 1px;
+               }
+
+               .cta p {
+                   font-size: 1.2em;
+                   font-style: italic;
+                   opacity: 0.95;
+               }
+
+               @media (max-width: 768px) {
+                   .title {
+                       font-size: 2.5em;
+                   }
+
+                   .subtitle {
+                       font-size: 1.5em;
+                   }
+
+                   .tagline {
+                       font-size: 1.2em;
+                   }
+
+                   .gallery-image {
+                       width: calc(100vw / 4);
+                   }
+
+                   .image-gallery {
+                       height: 150px;
+                   }
+
+                   @keyframes infiniteScroll {
+                       0% {
+                           transform: translateX(0);
+                       }
+                       100% {
+                           transform: translateX(calc(-1 * (100vw / 4 + 3px) * 9));
+                       }
+                   }
+
+                   .content {
+                       padding: 40px 30px;
+                   }
+
+                   .section h3 {
+                       font-size: 1.5em;
+                   }
+
+                   .section p {
+                       font-size: 1.1em;
+                   }
+
+                   .cta {
+                       padding: 40px 30px;
+                   }
+
+                   .cta h2 {
+                       font-size: 2em;
+                   }
+
+                   .cta p {
+                       font-size: 1.2em;
+                   }
+               }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="header">
+            <h1 class="title">UKRAINIAN LITERATURE BOOKCLUB</h1>
+            <div class="subtitle">RESISTANCE • CULTURE • HOPE</div>
+            <p class="tagline">They burn our books. We keep them alive.</p>
+            <a href="https://forms.gle/PEGU4p5Q7zykzNHV7" class="join-btn">Join Now</a>
+        </div>
+
+        <div class="image-gallery">
+            <div class="image-scroll">
+                <div class="gallery-image"><img src="2_sc.jpg" /></div>
+                <div class="gallery-image"><img src="3_sc.jpg" /></div>
+                <div class="gallery-image"><img src="4_sc.jpg" /></div>
+                <div class="gallery-image"><img src="5_sc.jpg" /></div>
+                <div class="gallery-image"><img src="6_sc.jpg" /></div>
+                <div class="gallery-image"><img src="7_sc.jpg" /></div>
+                <div class="gallery-image"><img src="8_sc.jpg" /></div>
+                <div class="gallery-image"><img src="9_sc.jpg" /></div>
+                <div class="gallery-image"><img src="10_sc.jpg" /></div>
+                <div class="gallery-image"><img src="2_sc.jpg" /></div>
+                <div class="gallery-image"><img src="3_sc.jpg" /></div>
+                <div class="gallery-image"><img src="4_sc.jpg" /></div>
+                <div class="gallery-image"><img src="5_sc.jpg" /></div>
+                <div class="gallery-image"><img src="6_sc.jpg" /></div>
+                <div class="gallery-image"><img src="7_sc.jpg" /></div>
+                <div class="gallery-image"><img src="8_sc.jpg" /></div>
+                <div class="gallery-image"><img src="9_sc.jpg" /></div>
+                <div class="gallery-image"><img src="10_sc.jpg" /></div>
+                <div class="gallery-image"><img src="2_sc.jpg" /></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h3>Why We Gather</h3>
+                <p>Russia targets Ukrainian libraries, publishers, and bookstores with missiles. But no missile can destroy stories once they are read and shared. Our bookclub exists to preserve voices, spread culture, and inspire hope.</p>
+            </div>
+
+            <div class="section">
+                <h3>What We Do</h3>
+                <p>Monthly meetings – online and in libraries worldwide.<br>
+                Reading Ukrainian literature as cultural resistance.</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Join Us to Keep Stories Alive</h2>
+            <p>When we read together, no culture can be silenced</p>
+        </div>
+    </div>
+</body>
+</html>
